@@ -1,0 +1,155 @@
+<h1>Assignment Editor</h1>
+<table width="100%">
+  <tr>
+    <td valign="top">
+      <ul>
+        <li>
+          <a href="#">Northeastern</a>
+        </li>
+        <li>
+          <a href="../../Account/Profile/screen.html">Account</a>
+        </li>
+        <li>
+          <a href="../../Dashboard/screen.html">Dashboard</a>
+        </li>
+        <li>
+          <a href="../../Courses/Home/screen.html">Courses</a>
+        </li>
+        <li>
+            <a href="#">Inbox</a>
+        </li>
+        <li>
+            <a href="#">History</a>
+        </li>
+        <li>
+            <a href="#">Studio</a>
+        </li>
+        <li>
+            <a href="#">Commons</a>
+        </li>
+        <li>
+            <a href="#">Help</a>
+        </li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul>
+        <li>
+          <a href="../../Courses/Home/screen.html">Home</a>
+        </li>
+        <li>
+          <a href="../../Courses/Modules/screen.html">Modules</a>
+        </li>
+        <li>
+          <a href="../../Courses/Piazza/screen.html">Piazza</a>
+        </li>
+        <li>
+          <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
+        </li>
+        <li>
+          <a href="../../Courses/Assignments/screen.html">Assignments</a>
+        </li>
+        <li>
+          <a href="../../Courses/Grades/screen.html">Grades</a>
+        </li>
+        <li>
+            <a href="#">Quizzes</a>
+        </li>
+        <li>
+            <a href="#">People</a>
+        </li>
+        <li>
+            <a href="#">Panopto Video</a>
+        </li>
+        <li>
+            <a href="#">Discussions</a>
+        </li>
+        <li>
+            <a href="#">Announcements</a>
+        </li>
+        <li>
+            <a href="#">Pages</a>
+        </li>
+        <li>
+            <a href="#">Files</a>
+        </li>
+        <li>
+            <a href="#">Rubrics</a>
+        </li>
+        <li>
+            <a href="#">Outcomes</a>
+        </li>
+        <li>
+            <a href="#">Collaberations</a>
+        </li>
+        <li>
+            <a href="#">Syllabus</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li>
+      </ul>
+    </td>
+    <td valign="top">
+      <select>
+        <option>SpeedGrader</option>
+      </select>
+      <hr>
+      <h3>Assignment Name</h3>
+      <form action="../../../Courses/Home">
+        <input value="A1 - ENV + HTML" />
+
+        <br />
+        <textarea cols="50" rows="10">
+            This is the description of the assignment
+        </textarea>
+        <br />
+        <label for="points">Points</label>
+        <br />
+        <input
+          id="points"
+          max="100"
+          min="50"
+          step="5"
+          type="number"
+          value="100"
+        />
+        <br />
+        Online Entry Options
+        <br />
+        <input id="text-entry" type="checkbox" />
+        <label for="text-entry">Text Entry</label>
+        <br />
+        <label> <input type="checkbox" /> Website URL </label>
+        <br />
+        <input type="checkbox" checked /> Media Recording<br />
+        <input type="checkbox" /> Annotation<br />
+        <input type="checkbox" /> Updloads
+
+        <br />
+        <br />
+        <h3>Favorite Genre</h3>
+        <input type="radio" name="genre" value="rock" /> Rock
+        <input type="radio" name="genre" value="pop" /> Pop
+        <input type="radio" name="genre" value="country" /> Country
+        <input type="radio" name="genre" value="hip-hop" /> Hip-Hop
+
+        <h3>Favorite Movie Genre</h3>
+        <input type="radio" name="moviegenre" value="action" /> Action
+        <input type="radio" name="moviegenre" value="comedy" /> Comedy
+        <input type="radio" name="moviegenre" value="drama" /> Drama
+        <input type="radio" name="moviegenre" value="horror" /> Horror
+
+        <h3>Due Dates</h3>
+        <input
+          type="date"
+          value="2023-09-21"
+          min="2023-09-07"
+          max="2023-09-28"
+        />
+
+        <button>Save</button>
+      </form>
+    </td>
+  </tr>
+</table>
