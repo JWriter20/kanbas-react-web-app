@@ -1,0 +1,134 @@
+
+<select>
+  <option>
+    SpeedGrader
+  </option>
+</select>
+<hr>
+<h3>Assignment Name</h3>
+<form action="../../../Courses/Home">
+  <input value="A1 - ENV + HTML" />
+
+  <br />
+  <textarea cols="50" rows="10">
+    This is the description of the assignment
+</textarea>
+  <br />
+  <br />
+  <label for="points">Points</label>
+  <br />
+  <input id="points" max="100" min="50" step="5" type="number" value="100" />
+  <br />
+  <br />
+  <label for="assignment-group">Assignment Group</label>
+  <br />
+  <select id="assignment-group">
+    <option>
+      ASSIGNMENTS
+    </option>
+  </select>
+  <br />
+  <br />
+
+  <label for="grade-display">Display Grade as</label>
+  <br />
+  <select id="grade-display">
+    <option>
+      Percentage
+    </option>
+  </select>
+  <br />
+  <br />
+
+  <label for="submission-type">Submission Type</label>
+  <br />
+  <select id="submission-type">
+    <option>
+      Online
+    </option>
+  </select>
+  <br />
+  <br />
+
+
+
+  Online Entry Options
+  <br />
+  <input id="text-entry" type="checkbox" />
+  <label for="text-entry">Text Entry</label>
+  <br />
+  <label> <input type="checkbox" /> Website URL </label><br />
+  <input type="checkbox" checked /> Media Recording<br />
+  <input type="checkbox" /> Annotation<br />
+  <input type="checkbox" /> Uploads
+
+  <br />
+  <br />
+
+  <label for="submission-attempts">Submission attempts</label>
+  <br />
+  <select id="submission-attempts">
+    <option>
+      Unlimited
+    </option>
+  </select>
+  <br />
+  <br />
+
+  <label for="plagiarism-review">Plagiarism Review</label>
+  <br />
+  <select id="plagiarism-review">
+    <option>
+      None
+    </option>
+  </select>
+  <br />
+  <br />
+
+  <label for="group-assingment">Group Assignment</label>
+  <br />
+  <input id="group-assingment" type="checkbox" /> This is a group assignment
+
+  <br />
+  <br />
+
+  <label for="peer-reviewers">Peer Reviews</label>
+  <br />
+  <input id="peer-reviewers" type="checkbox" /> Require Peer Reviews
+
+  <br />
+  <br />
+
+  Assign
+  <br />
+  <label for="assign-to">Assign to</label>
+  <br />
+  <input id="assign-to" type="text" />
+
+  <br />
+  <br />
+
+  <label for="due">Due</label>
+  <br />
+  <input id="due" type="date" value="2023-09-21" min="2023-09-07" max="2023-09-28"/>
+
+  <br />
+  <br />
+
+  <label for="available-from">Available from</label>
+  <br />
+  <input id="available-from" type="date" value="2023-09-21" min="2023-09-07" max="2023-09-28"/>
+
+  <br />
+  <br />
+
+  <label for="until">Until</label>
+  <br />
+  <input id="until" type="date" value="2023-09-21" min="2023-09-07" max="2023-09-28"/>
+
+  <br />
+  <br />
+
+  <button>Cancel</button>
+  <button>Save</button>
+</form>
