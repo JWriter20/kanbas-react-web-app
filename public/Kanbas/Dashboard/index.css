@@ -1,13 +1,41 @@
 .dashboard-card {
     height: 250px;
-    background: linear-gradient(to bottom, cyan 55%, white 45%);
+    background: linear-gradient(to bottom, blue 55%, white 45%);
 }
 
 .card-body {
-    margin-top: 45%;
+    margin-top: 46%;
 }
 
 .card-options {
     float: right;
     color: white;
 }
+
+.dashboard-row-margin {
+    margin: 20px;
+}
+
+.card-title {
+    color:blue;
+    overflow: hidden; 
+}
+
+.card-text {
+    color:grey;
+    overflow: hidden;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0.1rem 0.1rem;
+
+}
+
+.card-subtitle {
+    color:grey;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 0.1rem 0.1rem;
+    padding-bottom: 0.2rem;
+}
+
+
