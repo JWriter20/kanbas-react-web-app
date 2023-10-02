@@ -1,0 +1,13 @@
+.dashboard-card {
+    height: 250px;
+    background: linear-gradient(to bottom, cyan 55%, white 45%);
+}
+
+.card-body {
+    margin-top: 45%;
+}
+
+.card-options {
+    float: right;
+    color: white;
+}
