@@ -1,0 +1,15 @@
+a.indent {
+    margin-left: 30px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+a.canvas-link {
+    color:red;
+}
+
+.list-group-item {
+    border-left: 2px solid greenyellow;
+
+}
