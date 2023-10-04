@@ -156,68 +156,121 @@
           </ul>
         </div>
         <div class="col-md-10">
-          <select>
-            <option>SpeedGrader</option>
-          </select>
+
+          <div class="text-success" style="float: right"><i class="fa fa-check-circle right-icon text-success"></i>Published<button class="btn btn-secondary mx-2"><i class="fa fa-ellipsis-v right-icon mx-1" style="color: black;"></i></button></div>
+          <br>
           <hr>
-          <h3>Assignment Name</h3>
-          <form action="../../../Courses/Home">
-            <input value="A1 - ENV + HTML" />
-    
-            <br />
-            <textarea cols="50" rows="10">
-                This is the description of the assignment
-            </textarea>
-            <br />
-            <label for="points">Points</label>
-            <br />
-            <input
-              id="points"
-              max="100"
-              min="50"
-              step="5"
-              type="number"
-              value="100"
-            />
-            <br />
-            Online Entry Options
-            <br />
-            <input id="text-entry" type="checkbox" />
-            <label for="text-entry">Text Entry</label>
-            <br />
-            <label> <input type="checkbox" /> Website URL </label>
-            <br />
-            <input type="checkbox" checked /> Media Recording<br />
-            <input type="checkbox" /> Annotation<br />
-            <input type="checkbox" /> Updloads
-    
-            <br />
-            <br />
-            <h3>Favorite Genre</h3>
-            <input type="radio" name="genre" value="rock" /> Rock
-            <input type="radio" name="genre" value="pop" /> Pop
-            <input type="radio" name="genre" value="country" /> Country
-            <input type="radio" name="genre" value="hip-hop" /> Hip-Hop
-    
-            <h3>Favorite Movie Genre</h3>
-            <input type="radio" name="moviegenre" value="action" /> Action
-            <input type="radio" name="moviegenre" value="comedy" /> Comedy
-            <input type="radio" name="moviegenre" value="drama" /> Drama
-            <input type="radio" name="moviegenre" value="horror" /> Horror
-    
-            <h3>Due Dates</h3>
-            <input
-              type="date"
-              value="2023-09-21"
-              min="2023-09-07"
-              max="2023-09-28"
-            />
-    
-            <button>Save</button>
+
+          <form>
+            <div class="form-group">
+              <label for="assignment-name">Assignment Name</label>
+              <input type="text" class="form-control m-2" id="assignment-name">
+            </div>
+
+            <textarea class="form-control m-2" id="exampleFormControlTextarea1" rows="6"></textarea>
+
+            <div class="form-group row offset-3 my-3">
+              <label for="points-input" class="col-sm-2 col-form-label">Grade</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="points-input" max="100" min="50" step="5" type="number" value="100">
+              </div>
+            </div>
+
+            <div class="form-group row offset-3 my-3">
+              <label for="assignment-group" class="col-sm-2 col-form-label">Assignment Group</label>
+              <div class="col-sm-5">
+                <select class="form-select" id="assignment-group">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+               </select>
+              </div>
+            </div>
+
+            <div class="form-group row offset-3 my-3">
+              <label for="grade-display" class="col-sm-2 col-form-label">Display Grade As </label>
+              <div class="col-sm-5">
+                <select class="form-select" id="grade-display">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+               </select>
+              </div>
+            </div>
+
+            <div class="form-check offset-5 my-3">
+              <input class="form-check-input" type="checkbox" id="checkbox-q">
+              <label class="form-check-label" for="checkbox-q">
+                Do not count this assignment towards my final grade
+              </label>
+            </div>
+
+            <div class="form-group row offset-3 my-3">
+              <label for="sub-type-container" class="col-sm-2 col-form-label">Submission Type </label>
+              <div class="col-sm-5">
+                <div class="container border rounded border-dark p-4" id="sub-type-container">
+                  <select class="form-select mb-2">
+                    <option selected>Online</option>
+                 </select>
+                 Online Entry Options
+                  <br />
+                  <input id="text-entry" type="checkbox" />
+                  <label for="text-entry">Text Entry</label>
+                  <br />
+                  <label> <input type="checkbox" /> Website URL </label><br />
+                  <input type="checkbox" checked /> Media Recording<br />
+                  <input type="checkbox" /> Annotation<br />
+                  <input type="checkbox" /> Uploads
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row offset-3 my-3">
+              <label for="submission-attempts" class="col-sm-2 col-form-label">Submission Attempts</label>
+              <div class="col-sm-5">
+                <select class="form-select" id="submission-attempts">
+                  <option selected>Unlimited</option>
+               </select>
+              </div>
+            </div>
+
+
+            <div class="form-group row offset-3 my-3">
+              <label for="sub-type-container" class="col-sm-2 col-form-label">Assign </label>
+              <div class="col-sm-5">
+                <div class="container border rounded border-dark p-4" id="sub-type-container">
+                <label for="student-names">Assign to</label>
+                <input class="form-control" id="student-names" />
+
+                <label for="student-names">Due</label>
+                <input type="date" class="form-control" id="student-names" value="2023-09-21" min="2023-09-07" max="2023-09-28"/>
+
+                  <div class="form-group row">
+                    <div class="form-group col-md-6">
+                      <label for="student-names">Available from</label>
+                      <input type="date" class="form-control" id="student-names" value="2023-09-21" min="2023-09-07" max="2023-09-28">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="assignment-names">Until</label>
+                      <input type="date" class="form-control" id="assignment-names" value="2023-09-21" min="2023-09-07" max="2023-09-28">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </form>
 
+          <hr>
+          <div class="btn btn-secondary m-1" style="float:right; margin-left: 100%;">Cancel</div>
+          <div class="btn btn-danger m-1" style="float:right; margin-left: 100px;">Save</div>
+          <br>
+          <br>
+
+          <hr>
         </div>
       </div>
     </div>
-  </div>
 </body>
