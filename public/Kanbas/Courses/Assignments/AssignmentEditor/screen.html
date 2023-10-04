@@ -1,155 +1,223 @@
-<h1>Assignment Editor</h1>
-<table width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="#">Northeastern</a>
-        </li>
-        <li>
-          <a href="../../Account/Profile/screen.html">Account</a>
-        </li>
-        <li>
-          <a href="../../Dashboard/screen.html">Dashboard</a>
-        </li>
-        <li>
-          <a href="../../Courses/Home/screen.html">Courses</a>
-        </li>
-        <li>
-            <a href="#">Inbox</a>
-        </li>
-        <li>
-            <a href="#">History</a>
-        </li>
-        <li>
-            <a href="#">Studio</a>
-        </li>
-        <li>
-            <a href="#">Commons</a>
-        </li>
-        <li>
-            <a href="#">Help</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="../../Courses/Home/screen.html">Home</a>
-        </li>
-        <li>
-          <a href="../../Courses/Modules/screen.html">Modules</a>
-        </li>
-        <li>
-          <a href="../../Courses/Piazza/screen.html">Piazza</a>
-        </li>
-        <li>
-          <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
-        </li>
-        <li>
-          <a href="../../Courses/Assignments/screen.html">Assignments</a>
-        </li>
-        <li>
-          <a href="../../Courses/Grades/screen.html">Grades</a>
-        </li>
-        <li>
-            <a href="#">Quizzes</a>
-        </li>
-        <li>
-            <a href="#">People</a>
-        </li>
-        <li>
-            <a href="#">Panopto Video</a>
-        </li>
-        <li>
-            <a href="#">Discussions</a>
-        </li>
-        <li>
-            <a href="#">Announcements</a>
-        </li>
-        <li>
-            <a href="#">Pages</a>
-        </li>
-        <li>
-            <a href="#">Files</a>
-        </li>
-        <li>
-            <a href="#">Rubrics</a>
-        </li>
-        <li>
-            <a href="#">Outcomes</a>
-        </li>
-        <li>
-            <a href="#">Collaberations</a>
-        </li>
-        <li>
-            <a href="#">Syllabus</a>
-        </li>
-        <li>
-            <a href="#">Settings</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <select>
-        <option>SpeedGrader</option>
-      </select>
-      <hr>
-      <h3>Assignment Name</h3>
-      <form action="../../../Courses/Home">
-        <input value="A1 - ENV + HTML" />
+<!DOCTYPE html>
+<head>
+  <link href="screen.css" rel="stylesheet"/>
+  <link href="../../../Account/Profile/screen.css" rel="stylesheet"/>
+  <link href="../../../KanbasNavigation/index.css" rel="stylesheet"/>
+  <link href="../../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+  <link href="../../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="row">
+    <div class="col-1">
+      <nav id="sidebar" class="sidebar">
+        <div class="position-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <img src="../../../../NULogo.png" alt="" width="100%">
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Account/Profile/screen.html">
+                      <i class="nav-icon fa fa-user fa-2x" style="color: white;"></i><br>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dashboard/screen.html">
+                      <i class="nav-icon fa fa-tachometer-alt fa-2x"></i><br>
+                      Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Courses/Home/screen.html">
+                      <i class="nav-icon fa fa-book fa-2x"></i><br>
+                      Courses
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-calendar fa-2x"></i><br>
+                      Calendar
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-inbox fa-2x"></i><br>
+                      Inbox
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-clock fa-2x"></i><br>
+                      History
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-network-wired fa-2x"></i><br>
+                      Studio
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-copyright fa-2x"></i><br>
+                      Commons
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-question fa-2x"></i><br>
+                      Help
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-11">
+      <div class="row">
+        <div class="col-md-1" width=10px>
+          <a href="#" style="text-decoration: none;">
+            <i class="fa fa-light fa-bars" style="color: red; margin: 10px; margin-bottom: 0px; margin-right: 15px; font-size: 30px;"></i>
+          </a>
+        </div>
+        <div class="col-md-11">
+          <nav class="breadcrumb-menu" style="--bs-breadcrumb-divider: '>'; margin: 15px; margin-bottom: 0px;">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                  <a href="#" style="text-decoration: none; color: red;">CS4530.19752.MERGED.17299</a>
+              </li>
+              <li class="breadcrumb-item active">Grades</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="pb-3" style="display:inline;">
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-1 profile-home-nav">
+          <ul>
+            <li class="profile-nav-item active">
+              <a href="../../Courses/Home/screen.html">Home</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Modules</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Piazza</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Assignments/screen.html">Assignments</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Grades/screen.html">Grades</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Quizzes</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">People</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Panopto Video</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Discussions</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Announcements</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Pages</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Files</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Rubrics</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Outcomes</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Collaberations</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Syllabus</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <select>
+            <option>SpeedGrader</option>
+          </select>
+          <hr>
+          <h3>Assignment Name</h3>
+          <form action="../../../Courses/Home">
+            <input value="A1 - ENV + HTML" />
+    
+            <br />
+            <textarea cols="50" rows="10">
+                This is the description of the assignment
+            </textarea>
+            <br />
+            <label for="points">Points</label>
+            <br />
+            <input
+              id="points"
+              max="100"
+              min="50"
+              step="5"
+              type="number"
+              value="100"
+            />
+            <br />
+            Online Entry Options
+            <br />
+            <input id="text-entry" type="checkbox" />
+            <label for="text-entry">Text Entry</label>
+            <br />
+            <label> <input type="checkbox" /> Website URL </label>
+            <br />
+            <input type="checkbox" checked /> Media Recording<br />
+            <input type="checkbox" /> Annotation<br />
+            <input type="checkbox" /> Updloads
+    
+            <br />
+            <br />
+            <h3>Favorite Genre</h3>
+            <input type="radio" name="genre" value="rock" /> Rock
+            <input type="radio" name="genre" value="pop" /> Pop
+            <input type="radio" name="genre" value="country" /> Country
+            <input type="radio" name="genre" value="hip-hop" /> Hip-Hop
+    
+            <h3>Favorite Movie Genre</h3>
+            <input type="radio" name="moviegenre" value="action" /> Action
+            <input type="radio" name="moviegenre" value="comedy" /> Comedy
+            <input type="radio" name="moviegenre" value="drama" /> Drama
+            <input type="radio" name="moviegenre" value="horror" /> Horror
+    
+            <h3>Due Dates</h3>
+            <input
+              type="date"
+              value="2023-09-21"
+              min="2023-09-07"
+              max="2023-09-28"
+            />
+    
+            <button>Save</button>
+          </form>
 
-        <br />
-        <textarea cols="50" rows="10">
-            This is the description of the assignment
-        </textarea>
-        <br />
-        <label for="points">Points</label>
-        <br />
-        <input
-          id="points"
-          max="100"
-          min="50"
-          step="5"
-          type="number"
-          value="100"
-        />
-        <br />
-        Online Entry Options
-        <br />
-        <input id="text-entry" type="checkbox" />
-        <label for="text-entry">Text Entry</label>
-        <br />
-        <label> <input type="checkbox" /> Website URL </label>
-        <br />
-        <input type="checkbox" checked /> Media Recording<br />
-        <input type="checkbox" /> Annotation<br />
-        <input type="checkbox" /> Updloads
-
-        <br />
-        <br />
-        <h3>Favorite Genre</h3>
-        <input type="radio" name="genre" value="rock" /> Rock
-        <input type="radio" name="genre" value="pop" /> Pop
-        <input type="radio" name="genre" value="country" /> Country
-        <input type="radio" name="genre" value="hip-hop" /> Hip-Hop
-
-        <h3>Favorite Movie Genre</h3>
-        <input type="radio" name="moviegenre" value="action" /> Action
-        <input type="radio" name="moviegenre" value="comedy" /> Comedy
-        <input type="radio" name="moviegenre" value="drama" /> Drama
-        <input type="radio" name="moviegenre" value="horror" /> Horror
-
-        <h3>Due Dates</h3>
-        <input
-          type="date"
-          value="2023-09-21"
-          min="2023-09-07"
-          max="2023-09-28"
-        />
-
-        <button>Save</button>
-      </form>
-    </td>
-  </tr>
-</table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -20,6 +20,6 @@ a.canvas-link {
 }
 
 .list-group-item {
-    border-left: 2px solid greenyellow;
+    border-left: 5px solid green !important; 
 
 }
