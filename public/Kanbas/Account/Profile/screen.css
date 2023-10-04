@@ -41,4 +41,5 @@ i.edit-user-profile-icon {
 .save-buttons {
     float: right;
     margin: 3px;
+    padding: 3px;
 }
