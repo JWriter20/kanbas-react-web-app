@@ -1,185 +1,280 @@
-<table width="100%">
-  <tbody>
-    <tr>
-      <td valign="top">
-        <ul>
-          <li>
-            <a href="../../Account/Profile/screen.html">Account</a>
-          </li>
-          <li>
-            <a href="../../Dashboard/screen.html">Dashboard</a>
-          </li>
-          <li>
-            <a href="../../Courses/Home/screen.html">Courses</a>
-          </li>
-          <li>
-              <a href="#">Inbox</a>
-          </li>
-          <li>
-              <a href="#">History</a>
-          </li>
-          <li>
-              <a href="#">Studio</a>
-          </li>
-          <li>
-              <a href="#">Commons</a>
-          </li>
-          <li>
-              <a href="#">Help</a>
-          </li>
-        </ul>
-      </td>
-      <td valign="top">
-        <ul>
-          <li>
-            <a href="../../Courses/Home/screen.html">Home</a>
-          </li>
-          <li>
-            <a href="../../Courses/Modules/screen.html">Modules</a>
-          </li>
-          <li>
-            <a href="../../Courses/Piazza/screen.html">Piazza</a>
-          </li>
-          <li>
-            <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
-          </li>
-          <li>
-            <a href="../../Courses/Assignments/screen.html">Assignments</a>
-          </li>
-          <li>
-            <a href="../../Courses/Grades/screen.html">Grades</a>
-          </li>
-          <li>
-              <a href="#">Quizzes</a>
-          </li>
-          <li>
-              <a href="#">People</a>
-          </li>
-          <li>
-              <a href="#">Panopto Video</a>
-          </li>
-          <li>
+<!DOCTYPE html>
+<head>
+  <link href="screen.css" rel="stylesheet"/>
+  <link href="../Home/screen.css" rel="stylesheet"/>
+  <link href="../../Account/Profile/screen.css" rel="stylesheet"/>
+  <link href="../../KanbasNavigation/index.css" rel="stylesheet"/>
+  <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+  <link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="row">
+    <div class="col-1">
+      <nav id="sidebar" class="sidebar">
+        <div class="position-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <img src="../../../NULogo.png" alt="" width="100%">
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Account/Profile/screen.html">
+                      <i class="nav-icon fa fa-user fa-2x" style="color: white;"></i><br>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Dashboard/index.html">
+                      <i class="nav-icon fa fa-tachometer-alt fa-2x"></i><br>
+                      Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../Courses/Home/screen.html">
+                      <i class="nav-icon fa fa-book fa-2x"></i><br>
+                      Courses
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-calendar fa-2x"></i><br>
+                      Calendar
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-inbox fa-2x"></i><br>
+                      Inbox
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-clock fa-2x"></i><br>
+                      History
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-network-wired fa-2x"></i><br>
+                      Studio
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-copyright fa-2x"></i><br>
+                      Commons
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-question fa-2x"></i><br>
+                      Help
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-11">
+      <div class="row">
+        <div class="col-md-1" width=10px>
+          <a href="#" style="text-decoration: none;">
+            <i class="fa fa-light fa-bars" style="color: red; margin: 10px; margin-bottom: 0px; margin-right: 15px; font-size: 30px;"></i>
+          </a>
+        </div>
+        <div class="col-md-11">
+          <nav class="breadcrumb-menu" style="--bs-breadcrumb-divider: '>'; margin: 15px; margin-bottom: 0px;">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                  <a href="#" style="text-decoration: none; color: red;">CS4530.19752.MERGED.17299</a>
+              </li>
+              <li class="breadcrumb-item active">Assignments</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="pb-3" style="display:inline;">
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-1 profile-home-nav">
+          <ul>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Home/screen.html">Home</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Modules</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Piazza</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
+            </li>
+            <li class="profile-nav-item active">
+              <a href="../../Courses/Assignments/screen.html">Assignments</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Grades/screen.html">Grades</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Quizzes</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">People</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Panopto Video</a>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Discussions</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Announcements</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Pages</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Files</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Rubrics</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Outcomes</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Collaberations</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Syllabus</a>
-          </li>
-          <li>
+            </li>
+            <li class="profile-nav-item">
               <a href="#">Settings</a>
-          </li>
-        </ul>
-      </td>
-      <td valign="top">
-        <input type="text" placeholder="Search for Assignments"> 
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <input type="text" class="form-control mt-2" id="textInput" placeholder="Search for Assignment">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="btn-group" style="float: right;">
+                <button class="btn btn-secondary">+Group</button>
+                <button class="btn btn-danger">+Assignment</button>
+                <button class="btn btn-secondary"><i class="fa fa-ellipsis-v right-icon" style="color: black;"></i></button>
+              </div>
+            </div>
+          </div>
 
-<button>Group</button>
-<button>Assignment</button>
+          <hr>
 
-<select>
-    <option>Edit Assignment Dates</option>
-</select>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>ASSIGNMENTS - 40% of Total</h3>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
 
-<hr>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A1 - ENV + HTML</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A2 - CSS + BOOTSTRAP</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A3 - JS + REACT</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A4 - STATE + REDUX</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A5 - NODE + SESSION</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">A6 - MONGO </a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+          </ul>
 
-<br>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>QUIZZES - 10% of Total</h3>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
 
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Q1 - HTML</a><i class="fa fa-ellipsis-v right-icon" style="color: black;"></i>
+              <i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Q2 - CSS</a><i class="fa fa-ellipsis-v right-icon" style="color: black;"></i>
+              <i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Q3 - JS </a><i class="fa fa-ellipsis-v right-icon" style="color: black;"></i>
+              <i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Q4 - NODE</a><i class="fa fa-ellipsis-v right-icon" style="color: black;"></i>
+              <i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Q5 - MONGO </a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+          </ul>
 
-<h3>ASSIGNMENTS 40% of Total
-    <select id="assignment-edit">
-        <option>Edit</option>
-        <option> Speed Grader</option>
-        <option> Duplicate</option>
-        <option> Delete</option>
-        <option> Move to...</option>
-        <option> Send to...</option>
-        <option> Copy to...</option>
-        <option> Share to Commons</option>
-    </select>
-</h3>
-<ul>
-    <li><a href="./AssignmentEditor/screen.html">A1 - ENV + HTML <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">A2 - CSS + BOOTSTRAP <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">A3 - JS + REACT <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">A4 - STATE + REDUX <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">A5 - NODE + SESSION <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">A6 - MONGO <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-</ul>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>EXAMS - 20% of Total</h3>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
 
-<h3>QUIZZES 10% of Total
-    <select id="quiz-edit">
-        <option>Edit</option>
-        <option> Speed Grader</option>
-        <option> Duplicate</option>
-        <option> Delete</option>
-        <option> Move to...</option>
-        <option> Send to...</option>
-        <option> Copy to...</option>
-        <option> Share to Commons</option>
-    </select>
-</h3>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Midterm</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i></li>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Final</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i></li>
+          </ul>
 
-<ul>
-    <li><a href="./AssignmentEditor/screen.html">Q1 - HTML <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">Q2 - CSS <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">Q3 - JS, ES6 <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">Q4 - NODE <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">Q5 - MONGO <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-</ul>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <h3>PROJECTS - 30% of Total</h3>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
 
-
-<h3>EXAMS 20% of Total
-    <select id="exams-edit">
-        <option>Edit</option>
-        <option> Speed Grader</option>
-        <option> Duplicate</option>
-        <option> Delete</option>
-        <option> Move to...</option>
-        <option> Send to...</option>
-        <option> Copy to...</option>
-        <option> Share to Commons</option>
-    </select>
-</h3>
-
-<ul>
-    <li><a href="./AssignmentEditor/screen.html">Midterm <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-    <li><a href="./AssignmentEditor/screen.html">Final <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-</ul>
-
-<h3>PROJECTS 30% of Total
-    <select id="proj-edit">
-        <option>Edit</option>
-        <option> Speed Grader</option>
-        <option> Duplicate</option>
-        <option> Delete</option>
-        <option> Move to...</option>
-        <option> Send to...</option>
-        <option> Copy to...</option>
-        <option> Share to Commons</option>
-    </select>
-</h3>
-
-<ul>
-    <li><a href="./AssignmentEditor/screen.html">Project <br> <a href="#">Multiple Modules</a> | Not available yet</li>
-</ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+            <li class="list-group-item">
+              <i class="fa fa-grip-vertical m-1 float-left" style="color: grey;"></i><i class="fa m-2 fa-file float-left text-success"></i>
+              <a href="./AssignmentEditor/screen.html">Project</a>
+              <i class="fa fa-ellipsis-v right-icon" style="color: black;"></i><i class="fa fa-check-circle right-icon text-success"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,44 @@
+li.profile-nav-item {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5ps;
+}
+
+li.profile-nav-item.active {
+    border-left: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+li.profile-nav-item > a {
+    color: red;
+    text-decoration: none;
+    
+}
+
+li.profile-nav-item.active > a {
+    color: black;
+    text-decoration: none;
+    
+}
+
+.profile-home-nav {
+    min-width: 190px;
+    max-width: 200px;
+}
+
+i.edit-user-profile-icon {
+    padding: 20px;
+    font-size: 200px
+}
+
+.profile-edit-section {
+    margin-bottom: 30px;
+}
+
+.save-buttons {
+    float: right;
+    margin: 3px;
+}

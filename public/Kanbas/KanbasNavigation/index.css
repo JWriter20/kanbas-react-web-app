@@ -1,0 +1,42 @@
+#sidebar {
+    display: flex;
+    flex-flow: column;
+    min-width: 75px;
+    max-width: 85px;
+    min-height: 100vh;
+}
+
+#sidebar .nav-item {
+    text-align: center;
+    background-color: black;
+    color:white;
+}
+
+#sidebar .nav-item.active {
+    background-color: white;
+    color: red;
+}
+
+#sidebar .nav-item.active > a {
+    background-color: white;
+    color: red;
+}
+
+#sidebar .nav-item > a {
+    color: white;
+}
+
+#sidebar .nav-icon {
+    align-items: center;
+    color: red;
+    font-size: 30px;
+    margin: 5px;
+}
+
+#sidebar .nav-link {
+    display: block;
+    margin: 5px;
+    padding: 7px;
+    text-decoration: none; 
+    color: inherit; 
+}

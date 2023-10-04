@@ -1,159 +1,229 @@
-<table border="1" width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="#">Northeastern</a>
-        </li>
-        <li>
-          <a href="../../Account/Profile/screen.html">Account</a>
-        </li>
-        <li>
-          <a href="../../Dashboard/screen.html">Dashboard</a>
-        </li>
-        <li>
-          <a href="../../Courses/Home/screen.html">Courses</a>
-        </li>
-        <li>
-            <a href="#">Inbox</a>
-        </li>
-        <li>
-            <a href="#">History</a>
-        </li>
-        <li>
-            <a href="#">Studio</a>
-        </li>
-        <li>
-            <a href="#">Commons</a>
-        </li>
-        <li>
-            <a href="#">Help</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="../../Courses/Home/screen.html">Home</a>
-        </li>
-        <li>
-          <a href="../../Courses/Modules/screen.html">Modules</a>
-        </li>
-        <li>
-          <a href="../../Courses/Piazza/screen.html">Piazza</a>
-        </li>
-        <li>
-          <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
-        </li>
-        <li>
-          <a href="../../Courses/Assignments/screen.html">Assignments</a>
-        </li>
-        <li>
-          <a href="../../Courses/Grades/screen.html">Grades</a>
-        </li>
-        <li>
-            <a href="#">Quizzes</a>
-        </li>
-        <li>
-            <a href="#">People</a>
-        </li>
-        <li>
-            <a href="#">Panopto Video</a>
-        </li>
-        <li>
-            <a href="#">Discussions</a>
-        </li>
-        <li>
-            <a href="#">Announcements</a>
-        </li>
-        <li>
-            <a href="#">Pages</a>
-        </li>
-        <li>
-            <a href="#">Files</a>
-        </li>
-        <li>
-            <a href="#">Rubrics</a>
-        </li>
-        <li>
-            <a href="#">Outcomes</a>
-        </li>
-        <li>
-            <a href="#">Collaberations</a>
-        </li>
-        <li>
-            <a href="#">Syllabus</a>
-        </li>
-        <li>
-            <a href="#">Settings</a>
-        </li>
-      </ul>
-    </td>
-    <td valign="top">
-      <select title="Gradebook">
-        <option>Gradebook</option>
-      </select>
-      <button>Import</button>
-      <select title="Export">
-        <option>Export</option>
-      </select>
-      <button>Configure</button>
-      
-      <h3>Student Names</h3>
-      <input
-        type="text"
-        placeholder="joe, jane"
-        title="Type the usernames of students you want to filter"
-      />
-      <h3>Assignment Names</h3>
-      <input type="text" />
-      <br />
-      <br />
-      <button>Apply Filters</button>
-      <br />
-      <br />
-      <table width="100%" border="1">
-        <thead>
-          <tr>
-            <th>Student Name</th>
-            <th>A1 - HTML</th>
-            <th>A2 - CSS</th>
-            <th>A3 - JS</th>
-            <th>A4 - PHP</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>John Doe</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td>Jane Doe</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td>John Smith</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-          </tr>
-          <tr>
-            <td>Jane Smith</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>100%</td>
-          </tr>
-        </tbody>
-        <tfoot></tfoot>
-      </table>
-    </td>
-  </tr>
-</table>
+<!DOCTYPE html>
+<head>
+  <link href="screen.css" rel="stylesheet"/>
+  <link href="../../Account/Profile/screen.css" rel="stylesheet"/>
+  <link href="../../KanbasNavigation/index.css" rel="stylesheet"/>
+  <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet"/>
+  <link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="row">
+    <div class="col-1">
+      <nav id="sidebar" class="sidebar">
+        <div class="position-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <img src="../../../NULogo.png" alt="" width="100%">
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Account/Profile/screen.html">
+                      <i class="nav-icon fa fa-user fa-2x" style="color: white;"></i><br>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Dashboard/index.html">
+                      <i class="nav-icon fa fa-tachometer-alt fa-2x"></i><br>
+                      Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../Courses/Home/screen.html">
+                      <i class="nav-icon fa fa-book fa-2x"></i><br>
+                      Courses
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-calendar fa-2x"></i><br>
+                      Calendar
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-inbox fa-2x"></i><br>
+                      Inbox
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-clock fa-2x"></i><br>
+                      History
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-network-wired fa-2x"></i><br>
+                      Studio
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-copyright fa-2x"></i><br>
+                      Commons
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-question fa-2x"></i><br>
+                      Help
+                  </a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-md-11">
+      <div class="row">
+        <div class="col-md-1" width=10px>
+          <a href="#" style="text-decoration: none;">
+            <i class="fa fa-light fa-bars" style="color: red; margin: 10px; margin-bottom: 0px; margin-right: 15px; font-size: 30px;"></i>
+          </a>
+        </div>
+        <div class="col-md-11">
+          <nav class="breadcrumb-menu" style="--bs-breadcrumb-divider: '>'; margin: 15px; margin-bottom: 0px;">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                  <a href="#" style="text-decoration: none; color: red;">CS4530.19752.MERGED.17299</a>
+              </li>
+              <li class="breadcrumb-item active">Grades</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="pb-3" style="display:inline;">
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-1 profile-home-nav">
+          <ul>
+            <li class="profile-nav-item active">
+              <a href="../../Courses/Home/screen.html">Home</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Modules</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Piazza</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Zoom/screen.html">Zoom Meetings</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Assignments/screen.html">Assignments</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="../../Courses/Grades/screen.html">Grades</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Quizzes</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">People</a>
+            </li>
+            <li class="profile-nav-item">
+                <a href="#">Panopto Video</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Discussions</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Announcements</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Pages</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Files</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Rubrics</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Outcomes</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Collaberations</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Syllabus</a>
+            </li>
+            <li class="profile-nav-item">
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <div class="btn-group" style="float:right";>
+            <div class="btn btn-secondary px-3">Import</div>
+            <select class="form-select btn btn-secondary px-3" title="Export">
+              <option>Export</option>
+            </select>
+            <div class="btn btn-secondary px-3">Configure</div>
+          </div>
+        
+          <form>
+            <div class="form-group row">
+              <div class="form-group col-md-4">
+                <label for="student-names">Student Names</label>
+                <input class="form-control" id="student-names" placeholder="Search Students">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="assignment-names">Assignment Names</label>
+                <input class="form-control" id="assignment-names" placeholder="Search Assignments">
+              </div>
+            </div>
+          </form>
+
+          <div class="btn btn-secondary my-2">Apply Filters</div>
+
+          <table class="table" width="100%" border="1">
+            <thead>
+              <tr class="table-light">
+                <th class="text-danger"><div contenteditable>Student Name</div></th>
+                <th><div contenteditable>A1 - HTML</div></th>
+                <th><div contenteditable>A2 - CSS</div></th>
+                <th><div contenteditable>A3 - JS</div></th>
+                <th><div contenteditable>A4 - PHP</div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-danger"><div contenteditable>John Doe</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+              </tr>
+              <tr class="table-light">
+                <td class="text-danger"><div contenteditable>Jane Doe</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+              </tr>
+              <tr>
+                <td class="text-danger"><div contenteditable>John Smith</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+              </tr>
+              <tr class="table-light">
+                <td class="text-danger"><div contenteditable>Jane Smith</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+                <td><div contenteditable>100%</div></td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
