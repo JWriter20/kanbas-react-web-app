@@ -9,8 +9,8 @@
     { "_id": "RS103",
       "name": "Spacecraft Design", "number": "RS4570", "startDate": "2023-01-10", "endDate": "2023-05-15"
     },
-    { "_id": "RS103",
-    "name": "Spacecraft Design", "number": "RS4570", "startDate": "2023-01-10", "endDate": "2023-05-15"
+    { "_id": "RS104",
+    "name": "Software Engineering", "number": "RS4101", "startDate": "2023-01-10", "endDate": "2023-05-15"
   }
   ]
   
