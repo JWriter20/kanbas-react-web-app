@@ -17,34 +17,31 @@ function Courses() {
   const course = db.courses.find((course) => course._id === courseId);
   return (
     <div>
-      <h2>
-        <BreadCrumb />
-      </h2>
-      <div className="Container">
-        <CourseNavigation />
-        <div>
-          <div
-            className="overflow-y-scroll position-fixed bottom-0 end-0"
-            style={{
-              left: "320px",
-              top: "50px",
-            }}
-          >
-            <Routes>
-              <Route path="/" element={<Navigate to="Home" />} />
-              <Route path="Home" element={<Home/>} />
-              <Route path="Modules" element={<Modules/>} />
-              <Route path="Assignments" element={<Assignments/>} />
-              <Route
-                path="Assignments/:assignmentId"
-                element={<AssignmentEditor/>}
-              />
-              <Route path="Grades" element={<Grades/>} />
-            </Routes>
+      <div className="row">
+                <div className="row">
+            <BreadCrumb />
+          </div>
+      </div>
+      <div className="row">
+        <div className="col-2">
+          <CourseNavigation />
+        </div>
+        <div className="col-10">
+          <div>
+              <Routes>
+                <Route path="/" element={<Navigate to="Home" />} />
+                <Route path="Home" element={<Home/>} />
+                <Route path="Modules" element={<Modules/>} />
+                <Route path="Assignments" element={<Assignments/>} />
+                <Route
+                  path="Assignments/:assignmentId"
+                  element={<AssignmentEditor/>}
+                />
+                <Route path="Grades" element={<Grades/>} />
+              </Routes>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

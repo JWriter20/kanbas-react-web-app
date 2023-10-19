@@ -1,8 +1,9 @@
 import { Link, useParams, useLocation } from "react-router-dom";
+import "./index.css";
 
 
 function CourseNavigation() {
-  const links = ["Home", "Modules", "Assignments", "Grades"];
+  const links = ["Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Grades", "Quizzes", "People", "Panopto Video", "Discussions", "Announcements", "Pages", "Files", "Rubrics"];
   const { courseId } = useParams();
   const { pathname } = useLocation();
   return (
@@ -11,7 +12,7 @@ function CourseNavigation() {
         <Link
           key={index}
           to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`profile-nav-item list-group-item ${pathname.includes(link) && "active"}`}>
+          className={`profile-nav-item ${decodeURI(pathname).includes(link) && "active"}`}>
           {link}
         </Link>
       ))}
