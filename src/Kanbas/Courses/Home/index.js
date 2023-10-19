@@ -1,15 +1,16 @@
 import ModuleList from "../Modules/ModuleList";
-import React from "react";
-import "./style.css";
-import BreadCrumb from "../CourseNavigation/BreadCrumb";
 
 
 function Home() {
   return (
-    <div>
-      <BreadCrumb menuPath={["Home"]}/>
-      <ModuleList />
-      <h2>Status</h2>
+    <div className="row">
+        <div className="col-10">
+            <h2>Home</h2>
+            <ModuleList />
+        </div>
+        <div className="col-2">
+            <h2>Status</h2>
+        </div>
     </div>
   );
 }
