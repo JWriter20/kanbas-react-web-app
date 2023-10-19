@@ -34,13 +34,12 @@ function BreadCrumb() {
                                 {path}
                             </Link>
                         </li>
-
-
-                        ))
+                     ))
                 }
             </ol>
           </nav>
         </div>
+        <hr />
       </div>
     );
   }
