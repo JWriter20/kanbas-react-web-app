@@ -1,0 +1,21 @@
+li.hidden {
+  display: none;
+}
+
+.right-icon {
+    float: right;
+    margin-top: 10px;
+    margin-left: 6px;
+}
+
+.indent {
+    margin-left: 30px;
+    padding: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.b-green {
+    border-left: 5px solid green !important; 
+
+}
