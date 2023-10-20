@@ -28,7 +28,7 @@ function SingleModule(props) {
   const modules = db.modules;
   if (props.clicked[props.index]) {
     return (
-      <div>
+      <div className="my-3">
             <li className="list-group-item rounded-top py-3 b-green" style={{backgroundColor: "lightgrey", textAlign: "left"}}>
               <FaGripVertical className="m-1 mr-2" style={{color: "grey"}} /> 
               <div className="btn button" onClick={() => handleCarotClick(props)}><FaCaretDown />{modules[props.index].name}</div>
