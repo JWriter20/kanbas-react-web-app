@@ -33,7 +33,7 @@ function Assignments() {
             clicked ?
               (
                 <div className="my-3">
-                      <li className="list-group-item rounded-top py-3 b-green" style={{listStyleType: "none", backgroundColor: "lightgrey", textAlign: "left"}}>
+                      <li className="list-group-item rounded-top py-3 b-green" style={{ listStyleType: "none", backgroundColor: "lightgrey", textAlign: "left"}}>
                         <FaGripVertical className="m-1 mr-2" style={{color: "grey"}} /> 
                         <div className="btn button" onClick={() => setClicked(!clicked)}><FaCaretDown />Assignments</div>
                         <FaEllipsisV className="right-icon" style={{color: "black"}} />
@@ -48,13 +48,13 @@ function Assignments() {
                             <FaEllipsisV className="right-icon" style={{color: "black"}} />
                             <FaCheckCircle className="right-icon text-success" />
                             <Link
-                                style={{backgroundColor: "lightgrey"}}
+                                style={{ display: "inherit", backgroundColor: "lightgrey"}}
                                 key={assignment._id}
                                 to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                                 className="list-group-item">
                                 {assignment.title}
                               </Link>
-                          </span>
+                              </span>
                         </li>)
                       })
                     }
