@@ -28,6 +28,12 @@ function Labs() {
         >
           Assignment 5
         </Link>
+        <Link
+          to="/kanbas"
+          className="nav-link"
+        >
+          Kanbas
+        </Link>
       </div>
       <Routes>
         {/* <Route path="/" element={<Assignment3 />} /> */}
