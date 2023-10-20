@@ -28,9 +28,9 @@ function makeCard(course) {
                   <p class="card-title">
                       {course.name}</p>
                   <p class="card-text">
-                      {course.name}</p>
+                      {course.number}.{course._id}</p>
                   <p class="card-subtitle">
-                      {course.name}</p>
+                      {course.startDate} | {course.endDate}</p>
                   <i class="nav-icon fa" style={{color: "black", fontSize: "20px"}}>{FILE_ICON}</i>
               </div>
         </div>

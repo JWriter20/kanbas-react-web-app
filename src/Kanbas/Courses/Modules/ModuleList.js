@@ -10,35 +10,35 @@ function ModuleList() {
   const [clicked, setClicked] = useState(new Array(modules.length).fill(false));
   return (
     <ul class="list-group mr-2">
-      {console.log(modules)}
-      {modules.filter((module) => module.course === courseId).map((module, index) => {
-        return <SingleModule props={{index:index, clicked: clicked, setClicked: setClicked}}/>
+      {modules.map((module, index) => {
+        if (module.course === courseId) {
+          return <SingleModule props={{dataSource: module, index: index, clicked: clicked, setClicked: setClicked}}/>
+        }
       })}
     </ul>
   );
 }
 
-function handleCarotClick(props) {
+export function handleCarotClick(props) {
+  console.log(props.dataSource);
   props.clicked[props.index] = !props.clicked[props.index];
   props.setClicked([...props.clicked]);
 }
-
-function SingleModule(props) {
+ function SingleModule(props) {
   props = props.props;
-  const modules = db.modules;
   if (props.clicked[props.index]) {
     return (
       <div className="my-3">
-            <li className="list-group-item rounded-top py-3 b-green" style={{backgroundColor: "lightgrey", textAlign: "left"}}>
+            <li className="list-group-item rounded-top py-3 b-green" style={{listStyleType: "none", backgroundColor: "lightgrey", textAlign: "left"}}>
               <FaGripVertical className="m-1 mr-2" style={{color: "grey"}} /> 
-              <div className="btn button" onClick={() => handleCarotClick(props)}><FaCaretDown />{modules[props.index].name}</div>
+              <div className="btn button" onClick={() => handleCarotClick(props)}><FaCaretDown />{props.dataSource.name}</div>
               <FaEllipsisV className="right-icon" style={{color: "black"}} />
               <FaPlus className="right-icon mx-3"/>
               <FaCheckCircle className="right-icon text-success" />
             </li>
           {
-            modules[props.index].lessons.map((lesson, index) => {
-              return (<li className={`list-group-item py-3 b-green ${index == modules[props.index].lessons.length - 1 && 'rounded-bottom'}`} style={{backgroundColor: "lightgrey", textAlign: "left"}}>
+            props.dataSource.lessons?.map((lesson, index) => {
+              return (<li className={`list-group-item py-3 b-green ${index == props.dataSource.lessons.length - 1 && 'rounded-bottom'}`} style={{ listStyleType: "none", backgroundColor: "lightgrey", textAlign: "left"}}>
               <FaGripVertical className="m-1 mr-2" style={{color: "grey"}} /> 
                <FaEllipsisV className="right-icon" style={{color: "black"}} />
                <FaCheckCircle className="right-icon text-success" />
@@ -52,9 +52,9 @@ function SingleModule(props) {
   }
 
   return (
-    <li className="list-group-item rounded my-3 py-3 b-green" style={{backgroundColor: "lightgrey", textAlign: "left"}}>
+    <li className="list-group-item rounded my-3 py-3 b-green" style={{listStyleType: "none", backgroundColor: "lightgrey", textAlign: "left"}}>
           <FaGripVertical className="m-1 mr-2" style={{color: "grey"}} /> 
-          <div className="btn button" onClick={() => handleCarotClick(props)}><FaCaretRight />{modules[props.index].name}</div>
+          <div className="btn button" onClick={() => handleCarotClick(props)}><FaCaretRight />{props.dataSource.name}</div>
            <FaEllipsisV className="right-icon" style={{color: "black"}} />
            <FaPlus className="right-icon mx-3"/>
            <FaCheckCircle className=" right-icon text-success" />
