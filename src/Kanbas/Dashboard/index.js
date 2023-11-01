@@ -3,14 +3,25 @@ import db from "../Database";
 import "./index.css";
 import { FaFileAlt } from "react-icons/fa";
 import { React, useState } from "react";
+import { FaTrash, FaEdit } from "react-icons/fa";
 function Dashboard() {
   const [courses, setCourses] = useState(db.courses);
+  const course = {
+    name: "New Course",      number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15",
+  };
+  const addNewCourse = () => {
+    setCourses([...courses,
+              { ...course,
+                _id: new Date().getTime() }]);
+  };
+
   return (
     <div className="container">
       <h2>Dashboard</h2>
       <hr />
       <div className="container">
-        <h3>Published Courses({courses.length})</h3>
+        <h3>Published Courses({courses.length})<div className="btn btn-primary float-end" onClick={addNewCourse}>Add Course +</div></h3>
         <hr />
         <div class="row dashboard-row-margin">
             {makeRows()}
@@ -21,7 +32,6 @@ function Dashboard() {
 }
 
 function makeCard(course) {
-  const FILE_ICON = <FaFileAlt />;
   return <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
     <div class="col-12 col-md-6 col-xl-3">
             <div class="card shadow dashboard-card" style={{width: "270px"}}>
@@ -32,7 +42,15 @@ function makeCard(course) {
                       {course.number}.{course._id}</p>
                   <p class="card-subtitle">
                       {course.startDate} | {course.endDate}</p>
-                  <i class="nav-icon fa" style={{color: "black", fontSize: "20px"}}>{FILE_ICON}</i>
+                  <div className="btn px-1 py-0">
+                  <FaFileAlt style={{color: "black", fontSize: "20px"}}/>
+                  </div>
+                  <div className="btn py-0 px-1 float-end">
+                    <FaTrash style={{color: "red", fontSize: "20px"}}/>
+                  </div>
+                  <div className="btn py-0 px-1 float-end">
+                    <FaEdit style={{color: "black", fontSize: "21px"}}/>
+                  </div>
               </div>
         </div>
     </div>
@@ -40,7 +58,6 @@ function makeCard(course) {
 }
 
 function makeRows() {
-  const courses = db.courses;
   let rows = [];
 
   for (let i = 0; i < courses.length; i += 4) {
