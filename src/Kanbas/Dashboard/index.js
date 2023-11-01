@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import "./index.css";
 import { FaFileAlt } from "react-icons/fa";
+import { React, useState } from "react";
 function Dashboard() {
-  const courses = db.courses;
+  const [courses, setCourses] = useState(db.courses);
   return (
     <div className="container">
       <h2>Dashboard</h2>
