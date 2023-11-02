@@ -17,9 +17,19 @@ function Dashboard() {
   const [state, setState] = useState({courses: db.courses, modal: {active: false, title: "", submitFunc: () => null}, course: exampleCourse});
 
   const addNewCourse = () => {
-    setState({...state, courses: [...state.courses,
-              { ...state.course,
-                _id: new Date().getTime() }]});
+    setState((prevState) => {
+      const updatedCourses = {
+        ...prevState,
+        courses: [
+          ...prevState.courses,
+          {
+            ...prevState.course,
+            _id: new Date().getTime().toString(),
+          },
+        ],
+      };
+      return updatedCourses;
+    });
   };
 
   console.log(state);
@@ -30,7 +40,7 @@ function Dashboard() {
       <h2>Dashboard</h2>
       <hr />
       <div className="container">
-        <h3>Published Courses({state.courses.length})<div className="btn btn-primary float-end" onClick={() => setState({...state, course: exampleCourse, modal: {...state.modal, active: true, title: "Add Course", submitFunc: addNewCourse}})}>Add Course +</div></h3>
+        <h3>Published Courses({state.courses.length})<div className="btn btn-primary float-end" onClick={() => setState({...state, modal: {...state.modal, active: true, title: "Add Course", submitFunc: addNewCourse}})}>Add Course +</div></h3>
         <hr />
         <div className="row dashboard-row-margin">
             {makeRows(state, setState)}
@@ -47,6 +57,7 @@ function makeCard(state, setState, newCourse) {
 
   const updateCourse = (courseId) => {
     const newState = {...state, courses: state.courses.map((course) => course._id === courseId ? state.course : course)};
+    console.log("below");
     console.log(newState);
     setState(newState);
   };
@@ -106,19 +117,18 @@ function createModal(state, setState) {
   const newCourse = state.course;
 
   const setCourse = (course) => {
-    setState({...state, course: course})
-  }
-
+    setState({ ...state, course: course });
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     state.modal.submitFunc();
     handleClose();
-  }
+  };
 
   const handleClose = () => {
-    setState({...state, modal: {...state.modal, active: false}});
-  }
+    setState({ ...state, modal: { ...state.modal, active: false } });
+  };
 
   return (
     <>
@@ -156,7 +166,12 @@ function createModal(state, setState) {
           <Button variant="secondary" type="button" onClick={handleClose}>
             Close
           </Button>
-          <Button form="createCourseModal" type="submit" variant="primary" onClick={handleSubmit}>
+          <Button
+            form="createCourseModal"
+            type="submit"
+            variant="primary"
+            onClick={handleSubmit}
+          >
             Submit
           </Button>
         </Modal.Footer>
