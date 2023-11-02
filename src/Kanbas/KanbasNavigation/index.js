@@ -9,9 +9,9 @@ function KanbasNavigation() {
   <FaRegCalendar />, <FaInbox />, <FaClock />, <FaNetworkWired />, <FaRegCopyright />, <FaQuestion />]
   const { pathname } = useLocation();
   return (
-    <nav id="sidebar" class="sidebar">
-        <div class="position-sticky">
-            <ul class="nav flex-column">
+    <nav id="sidebar" className="sidebar">
+        <div className="position-sticky">
+            <ul className="nav flex-column">
                 {icons.map((icon, index) => (
                     <li className={`nav-item ${pathname.includes(links[index]) && links[index] !== "" && "active"}`}>
                     <Link

@@ -9,7 +9,7 @@ function ModuleList() {
   const modules = db.modules;
   const [clicked, setClicked] = useState(new Array(modules.length).fill(false));
   return (
-    <ul class="list-group mr-2">
+    <ul className="list-group mr-2">
       {modules.map((module, index) => {
         if (module.course === courseId) {
           return <SingleModule props={{dataSource: module, index: index, clicked: clicked, setClicked: setClicked}}/>

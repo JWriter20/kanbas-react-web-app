@@ -8,7 +8,7 @@ function BreadCrumb() {
 
     return (
         <div className="row">
-            <div class="col-md-1" width="10px">
+            <div className="col-md-1" width="10px">
                 <Link
                     key={menuPath.join("/")}
                     to={`${useLocation().pathname}`}
@@ -16,17 +16,17 @@ function BreadCrumb() {
                     <FaBars style={barsStyle}/>
                 </Link>
             </div>
-            <div class="col-md-11">
-            <nav class="breadcrumb-menu" style={{BsBreadcrumbDivider: '>', margin: "10px", marginLeft: "0px", marginBottom: "0px"}}>
-                <ol class="breadcrumb">
+            <div className="col-md-11">
+            <nav className="breadcrumb-menu" style={{BsBreadcrumbDivider: '>', margin: "10px", marginLeft: "0px", marginBottom: "0px"}}>
+                <ol className="breadcrumb">
                     {
                         menuPath
                             .map((path, index) => (
                                 index == menuPath.length - 1 ?
-                                <li class="breadcrumb-item h3 active">
+                                <li className="breadcrumb-item h3 active">
                                     {path}
                                 </li> :
-                                <li class="breadcrumb-item h3">
+                                <li className="breadcrumb-item h3">
                                 <Link
                                     style={{textDecoration: 'none', color: 'red'}}
                                     key={path}
