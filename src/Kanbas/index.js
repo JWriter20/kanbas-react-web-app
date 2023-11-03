@@ -5,11 +5,13 @@ import Courses from "./Courses";
 import Account from "./Account";
 import Dashboard from "./Dashboard";
 import db from "./Database";
-import BreadCrumb from "./Courses/CourseNavigation/BreadCrumb";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
   return (
+    <Provider store={store}>
     <div className="row">
       <div className="col-1">
         <KanbasNavigation />
@@ -27,7 +29,8 @@ function Kanbas() {
           </Routes>
         </div>
       </div>
-    </div>
+    </div>  
+    </Provider>
   );
 }
 export default Kanbas;

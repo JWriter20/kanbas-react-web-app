@@ -3,41 +3,19 @@ import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
 import { FaEllipsisV, FaCheckCircle, FaGripVertical, FaCaretDown, FaCaretRight, FaPlus, FaTrash, FaEdit } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const [modules, setModules] = useState(db.modules);
-  const [module, setModule] = useState({
-    name: "New Module",
-    description: "New Description",
-    course: courseId,
-  });
-  const addModule = (module) => {
-    setModules([
-      { ...module, _id: new Date().getTime().toString() },
-        ...modules,
-    ]);
-  };
-
-  const deleteModule = (moduleId) => {
-    setModules(modules.filter(
-      (module) => module._id !== moduleId));
-  };
-
-  const updateModule = () => {
-    setModules(
-      modules.map((m) => {
-        if (m._id === module._id) {
-          return module;
-        } else {
-          return m;
-        }
-      })
-    );
-  }
-
-
-
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
   const [clicked, setClicked] = useState(new Array(modules.length).fill(false));
   return (
@@ -47,23 +25,23 @@ function ModuleList() {
             <b>Create a new module</b>
           <div className="form-group m-1">
             <input className="form-control" value={module.name}
-                onChange={(e) => setModule({
-                  ...module, name: e.target.value })}
+                onChange={(e) => dispatch(setModule({
+                  ...module, name: e.target.value }))}
               />
           </div>
           <div class="form-group m-1">
           <textarea className="form-control" value={module.description}
-              onChange={(e) => setModule({
-                ...module, description: e.target.value })}
+              onChange={(e) => dispatch(setModule({
+                ...module, description: e.target.value }))}
             />
           </div>
-          <button type="submit" className="btn btn-success m-1" onClick={() => { addModule(module) }}>Add</button>
-          <button className="btn btn-primary m-1" onClick={() => { updateModule(module) }}>Update</button>
+          <button type="submit" className="btn btn-success m-1" onClick={() => { dispatch(addModule(module)) }}>Add</button>
+          <button className="btn btn-primary m-1" onClick={() => { dispatch(updateModule(module)) }}>Update</button>
           </form>
         </li>
       {modules.map((module, index) => {
         if (module.course === courseId) {
-          return <SingleModule props={{dataSource: module, index: index, clicked: clicked, setClicked: setClicked, deleteModule: deleteModule, setModule: setModule}}/>
+          return <SingleModule props={{dataSource: module, index: index, clicked: clicked, setClicked: setClicked}}/>
         }
       })}
     </ul>
@@ -76,6 +54,7 @@ export function handleCarotClick(props) {
   props.setClicked([...props.clicked]);
 }
  function SingleModule(props) {
+  const dispatch = useDispatch();
   props = props.props;
   if (props.clicked[props.index]) {
     return (
@@ -86,10 +65,10 @@ export function handleCarotClick(props) {
               <FaEllipsisV className="right-icon" style={{color: "black"}} />
               <FaPlus className="right-icon mx-3"/>
               <FaCheckCircle className="right-icon text-success" />
-              <div className="btn py-0 px-1 float-end" onClick={() => props.deleteModule(props.dataSource._id)}>
+              <div className="btn py-0 px-1 float-end" onClick={() => dispatch(deleteModule(props.dataSource._id))}>
                 <FaTrash className="right-icon text-danger mx-1"/>
               </div>
-              <div className="btn py-0 px-1 float-end" onClick={() => { props.setModule(props.dataSource)}}>
+              <div className="btn py-0 px-1 float-end" onClick={() => { dispatch(setModule(props.dataSource))}}>
                 <FaEdit className="right-icon mx-1"/>
               </div>
             </li>
@@ -121,10 +100,10 @@ export function handleCarotClick(props) {
            <FaEllipsisV className="right-icon" style={{color: "black"}} />
            <FaPlus className="right-icon mx-3"/>
            <FaCheckCircle className=" right-icon text-success" />
-           <div className="btn py-0 px-1 float-end" onClick={() => props.deleteModule(props.dataSource._id)}>
+           <div className="btn py-0 px-1 float-end" onClick={() => dispatch(deleteModule(props.dataSource._id))}>
               <FaTrash className="right-icon text-danger mx-1"/>
             </div>
-            <div className="btn py-0 px-1 float-end" onClick={() => { props.setModule(props.dataSource); }}>
+            <div className="btn py-0 px-1 float-end" onClick={() => { dispatch(setModule(props.dataSource)); }}>
               <FaEdit className="right-icon mx-1"/>
             </div>
         </li>
