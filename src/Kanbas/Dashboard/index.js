@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import db from "../Database";
 import "./index.css";
 import { FaFileAlt } from "react-icons/fa";
 import { React, useState } from "react";
@@ -14,8 +13,8 @@ const course = {
 const ADD_COURSE = "ADD";
 const EDIT_COURSE = "EDIT";
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
+function Dashboard({ courses, setCourses}
+) {
   const [modalData, setModalData] = useState({active: false, title: "", modalType: ADD_COURSE, course: course});
 
   console.log(modalData)
