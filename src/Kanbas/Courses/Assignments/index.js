@@ -12,17 +12,17 @@ function Assignments() {
     (assignment) => assignment.course === courseId);
   return (
     <div className="container">
-          <div class="row">
-            <div class="col-md-5">
-              <div class="form-group">
-                <input type="text" class="form-control mt-2" id="textInput" placeholder="Search for Assignment" />
+          <div className="row">
+            <div className="col-md-5">
+              <div className="form-group">
+                <input type="text" className="form-control mt-2" id="textInput" placeholder="Search for Assignment" />
               </div>
             </div>
-            <div class="col-md-7">
-              <div class="btn-group" style={{float: "right"}}>
-                <button class="btn btn-secondary rounded ">+Group</button>
-                <button class="btn btn-danger mx-1 rounded">+Assignment</button>
-                <button class="btn btn-secondary rounded"><FaEllipsisV style={{color: "black"}} /></button>
+            <div className="col-md-7">
+              <div className="btn-group" style={{float: "right"}}>
+                <button className="btn btn-secondary rounded ">+Group</button>
+                <button className="btn btn-danger mx-1 rounded">+Assignment</button>
+                <button className="btn btn-secondary rounded"><FaEllipsisV style={{color: "black"}} /></button>
               </div>
             </div>
           </div>
