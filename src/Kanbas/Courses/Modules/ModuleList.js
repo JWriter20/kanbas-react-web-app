@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "./index.css";
@@ -9,13 +9,34 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules
 } from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+  
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
 
   const [clicked, setClicked] = useState(new Array(modules.length).fill(false));
   return (
@@ -35,8 +56,8 @@ function ModuleList() {
                 ...module, description: e.target.value }))}
             />
           </div>
-          <button type="submit" className="btn btn-success m-1" onClick={() => { dispatch(addModule(module)) }}>Add</button>
-          <button className="btn btn-primary m-1" onClick={() => { dispatch(updateModule(module)) }}>Update</button>
+          <button type="submit" className="btn btn-success m-1" onClick={handleAddModule}>Add</button>
+          <button className="btn btn-primary m-1" onClick={handleUpdateModule}>Update</button>
           </form>
         </li>
       {modules.map((module, index) => {
@@ -56,6 +77,13 @@ export function handleCarotClick(props) {
  function SingleModule(props) {
   const dispatch = useDispatch();
   props = props.props;
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
   if (props.clicked[props.index]) {
     return (
       <div className="my-3">
@@ -65,10 +93,10 @@ export function handleCarotClick(props) {
               <FaEllipsisV className="right-icon" style={{color: "black"}} />
               <FaPlus className="right-icon mx-3"/>
               <FaCheckCircle className="right-icon text-success" />
-              <div className="btn py-0 px-1 float-end" onClick={() => dispatch(deleteModule(props.dataSource._id))}>
+              <div className="btn py-0 px-1 float-end" onClick={() => handleDeleteModule(props.dataSource._id)}>
                 <FaTrash className="right-icon text-danger mx-1"/>
               </div>
-              <div className="btn py-0 px-1 float-end" onClick={() => { dispatch(setModule(props.dataSource))}}>
+              <div className="btn py-0 px-1 float-end" onClick={() => dispatch(setModule(props.dataSource))}>
                 <FaEdit className="right-icon mx-1"/>
               </div>
             </li>
@@ -100,10 +128,10 @@ export function handleCarotClick(props) {
            <FaEllipsisV className="right-icon" style={{color: "black"}} />
            <FaPlus className="right-icon mx-3"/>
            <FaCheckCircle className=" right-icon text-success" />
-           <div className="btn py-0 px-1 float-end" onClick={() => dispatch(deleteModule(props.dataSource._id))}>
+           <div className="btn py-0 px-1 float-end" onClick={() => handleDeleteModule(props.dataSource._id) }>
               <FaTrash className="right-icon text-danger mx-1"/>
             </div>
-            <div className="btn py-0 px-1 float-end" onClick={() => { dispatch(setModule(props.dataSource)); }}>
+            <div className="btn py-0 px-1 float-end" onClick={() => { dispatch(setModule(props.dataSource)) }}>
               <FaEdit className="right-icon mx-1"/>
             </div>
         </li>

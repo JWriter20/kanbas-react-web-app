@@ -13,14 +13,13 @@ const course = {
 const ADD_COURSE = "ADD";
 const EDIT_COURSE = "EDIT";
 
-function Dashboard({ courses, setCourses}
+function Dashboard({ courses, updateCourse, addCourse, deleteCourse }
 ) {
   const [modalData, setModalData] = useState({active: false, title: "", modalType: ADD_COURSE, course: course});
 
-  console.log(modalData)
   return (
     <div className="container">
-      { modalData.active ? createModal(modalData, setModalData, courses, setCourses) : null}
+      { modalData.active ? createModal(modalData, addCourse, updateCourse, setModalData ) : null}
       <h2>Dashboard</h2>
       <hr />
       <div className="container">
@@ -29,18 +28,14 @@ function Dashboard({ courses, setCourses}
         }>Add Course +</div></h3>
         <hr />
         <div className="row dashboard-row-margin">
-            {makeRows(courses, setCourses, modalData, setModalData)}
+            {makeRows(courses, deleteCourse, modalData, setModalData)}
         </div>
       </div>
     </div>
   );
 }
 
-function makeCard(course, courses, setCourses, modalData, setModalData) {
-  const deleteCourse = () => {
-    setCourses(courses.filter((c) => c._id !== course._id));
-  };
-
+function makeCard(course, deleteCourse, modalData, setModalData) {
   const showModal = () => {
     setModalData({...modalData, active: true, title: "Edit Course", modalType: EDIT_COURSE, course: course})
   }
@@ -76,16 +71,16 @@ function makeCard(course, courses, setCourses, modalData, setModalData) {
   </Link>
 }
 
-function makeRows(courses, setCourses, modalData, setModalData) {
+function makeRows(courses, deleteCourse, modalData, setModalData) {
   let rows = [];
 
   for (let i = 0; i < courses.length; i += 4) {
     rows.push(
       <div className="list-group list-group-horizontal">
-        {i < courses.length ? makeCard(courses[i], courses, setCourses, modalData, setModalData) : ''}
-        {i + 1 < courses.length ? makeCard(courses[i + 1], courses, setCourses, modalData, setModalData): ''}
-        {i + 2 < courses.length ? makeCard(courses[i + 2], courses, setCourses, modalData, setModalData): ''}
-        {i + 3 < courses.length ? makeCard(courses[i + 3], courses, setCourses, modalData, setModalData): ''}
+        {i < courses.length ? makeCard(courses[i], deleteCourse, modalData, setModalData) : ''}
+        {i + 1 < courses.length ? makeCard(courses[i + 1], deleteCourse, modalData, setModalData): ''}
+        {i + 2 < courses.length ? makeCard(courses[i + 2], deleteCourse, modalData, setModalData): ''}
+        {i + 3 < courses.length ? makeCard(courses[i + 3], deleteCourse, modalData, setModalData): ''}
       </div>
     );
 
@@ -95,26 +90,13 @@ function makeRows(courses, setCourses, modalData, setModalData) {
     
 }
 
-function createModal(modalData, setModalData, courses, setCourses) {
-
-  const addNewCourse = () => {
-    setCourses([...courses,
-              { ...modalData.course,
-                _id: new Date().getTime() }]);
-  };
-
-  const updateCourse = () => {
-    const newState = courses.map((c) => c._id === modalData.course._id ? modalData.course : c);
-    setCourses(newState);
-  };
-
-
+function createModal(modalData, addCourse, updateCourse, setModalData) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
     switch (modalData.modalType) {
-      case ADD_COURSE: addNewCourse(); break;
-      case EDIT_COURSE: updateCourse(); break;
+      case ADD_COURSE: addCourse(modalData.course); break;
+      case EDIT_COURSE: updateCourse(modalData.course); break;
       default:
         break;
     }
