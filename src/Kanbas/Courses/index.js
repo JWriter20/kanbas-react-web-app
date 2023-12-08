@@ -12,7 +12,7 @@ import axios from "axios";
 
 function Courses() {
   const { courseId } = useParams();
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_BASE_API_URL;
   const URL = `${API_BASE}/courses`;
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {

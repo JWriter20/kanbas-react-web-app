@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 function EncodingParametersInURLs() {
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_BASE_API_URL;
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [assignment, setAssignment] = useState({
