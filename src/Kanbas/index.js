@@ -67,7 +67,6 @@ function Kanbas() {
             <Route path="Account" element={<Account />} />
             <Route path="Dashboard" element={<Dashboard
               courses={courses}
-              setCourses={setCourses}
               updateCourse={updateCourse}
               addCourse={addCourse}
               deleteCourse={deleteCourse}/>} />

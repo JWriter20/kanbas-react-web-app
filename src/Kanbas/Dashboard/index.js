@@ -4,6 +4,7 @@ import { FaFileAlt } from "react-icons/fa";
 import { React, useState } from "react";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import { Modal, Button, Form } from 'react-bootstrap';
+import { useDispatch } from "react-redux";
 
 const course = {
   name: "New Course",      number: "New Number",
@@ -15,6 +16,7 @@ const EDIT_COURSE = "EDIT";
 
 function Dashboard({ courses, updateCourse, addCourse, deleteCourse }
 ) {
+  const dispatch = useDispatch();
   const [modalData, setModalData] = useState({active: false, title: "", modalType: ADD_COURSE, course: course});
 
   return (
@@ -55,7 +57,7 @@ function makeCard(course, deleteCourse, modalData, setModalData) {
                   </div>
                   <div className="btn py-0 px-1 float-end" onClick={(event) => { 
                       event.preventDefault(); 
-                      deleteCourse();
+                      deleteCourse(course);
                     }}>
                     <FaTrash style={{color: "red", fontSize: "20px"}} />
                   </div>
